@@ -26,7 +26,7 @@ BEGIN
 	BEGIN
 
 		IF EXISTS(SELECT 1 FROM Customers WHERE EmailAddress = @EmailAddress)
-			THROW 50000, 'EmailAddress already Exists', 16;
+			THROW 50000, 'EmailAddress already Exists - CODE 777', 16;
 
 		IF EXISTS(SELECT 1 FROM Customers WHERE EmailAddress = @EmailAddress)
 			THROW 50000, 'PhoneNumber already Exists', 16;
